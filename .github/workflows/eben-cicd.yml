@@ -19,3 +19,4 @@ jobs:
           script: | 
             su - user-apps
             whoami
+            pwd
