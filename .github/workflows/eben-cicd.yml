@@ -25,4 +25,11 @@ jobs:
             git pull origin main
             git branch 
             git log --oneline --name-status --pretty='format:%C(yellow)%h %C(auto)%d %s %C(red)(%cn, %cr)' -n 10 |  sed '/^\s*$/d'
+            chown -R user-apps:user-apps /home/user-apps/gps-skysatu && chown -R user-apps:user-apps /home/user-apps/gps-skysatu/*
+            chmod -R 777 /home/user-apps/gps-skysatu/*
             ls -al
+            composer update && composer dump-autoload
+            php artisan storage:link
+            php artisan config:clear
+            php artisan cache:clear
+            
