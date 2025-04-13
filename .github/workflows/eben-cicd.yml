@@ -21,7 +21,6 @@ jobs:
             whoami
             cd /home/user-apps/gps-skysatu
             pwd
-            git config --global --add safe.directory /home/user-apps/gps-skysatu
             git stash 
             git pull origin main
             git branch 
