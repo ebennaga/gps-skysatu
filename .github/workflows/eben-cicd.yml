@@ -17,6 +17,6 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: | 
-            su - user-apps
+            su user-apps
             whoami
             pwd
