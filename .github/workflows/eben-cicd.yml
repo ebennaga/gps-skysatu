@@ -21,7 +21,9 @@ jobs:
             whoami
             cd /home/user-apps/gps-skysatu
             pwd
+            git config --global --add safe.directory /home/user-apps/gps-skysatu
             git stash 
             git pull origin main
             git branch 
             git log --oneline --name-status --pretty='format:%C(yellow)%h %C(auto)%d %s %C(red)(%cn, %cr)' -n 10 |  sed '/^\s*$/d'
+            ls -al
