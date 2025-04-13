@@ -20,3 +20,4 @@ jobs:
             whoami
             su - user-apps
             ls -al
+            whoami
