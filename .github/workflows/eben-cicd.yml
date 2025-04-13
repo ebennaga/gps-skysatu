@@ -19,4 +19,9 @@ jobs:
           script: | 
             su user-apps
             whoami
+            cd /home/user-apps/gps-skysatu
             pwd
+            git stash 
+            git pull origin main
+            git branch 
+            git log --oneline --name-status --pretty='format:%C(yellow)%h %C(auto)%d %s %C(red)(%cn, %cr)' -n 10 |  sed '/^\s*$/d'
