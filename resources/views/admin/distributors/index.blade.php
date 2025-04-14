@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div style="margin-top:20px;">
+<div style="margin-top:40px;">
 </div>
     @can('distributor_create')
         <div style="margin-bottom: 10px;" class="row">
