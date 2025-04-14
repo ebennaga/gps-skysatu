@@ -122,8 +122,8 @@
                                 {{ $ship->call_sign ?? '' }}
                             </td>
                             <td style="text-align: center;">
-                                {{ $ship->send_to_pertamina == 1 ? 'Enabled' :  'Disabled' }}
-                                <!--{{ $ship->send_to_pertamina == 1 ? 'Disabled' :  'Enabled' }}-->
+                                {{-- {{ $ship->send_to_pertamina == 1 ? 'Enabled' :  'Disabled' }} --}}
+                                {{ $ship->send_to_pertamina == 1 ? 'Disabled' :  'Enabled' }}
                             </td>
                             <td>
                                 {{ $ship->owner ?? '' }}

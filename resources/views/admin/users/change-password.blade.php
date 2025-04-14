@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-
+<div style="margin-top:20px;">
+</div>
     <div class="card">
         <div class="card-header">
             {{ trans('cruds.user.fields.change_password') }}
