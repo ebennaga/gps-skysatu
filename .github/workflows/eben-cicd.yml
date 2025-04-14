@@ -1,0 +1,35 @@
+name:  deployment
+# Trigger this workflow on pushes to the specified branch
+on:
+  push:
+    branches:
+      - main # Replace with your branch name
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 195.35.20.88
+          username: root
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          script: | 
+            su user-apps
+            whoami
+            cd /home/user-apps/gps-skysatu
+            pwd
+            git stash 
+            git pull origin main
+            git branch 
+            git log --oneline --name-status --pretty='format:%C(yellow)%h %C(auto)%d %s %C(red)(%cn, %cr)' -n 10 |  sed '/^\s*$/d'
+            chown -R user-apps:user-apps /home/user-apps/gps-skysatu && chown -R user-apps:user-apps /home/user-apps/gps-skysatu/*
+            chmod -R 777 /home/user-apps/gps-skysatu/*
+            ls -al
+            composer update && composer dump-autoload
+            php artisan storage:link
+            php artisan config:clear
+            php artisan cache:clear
+            
