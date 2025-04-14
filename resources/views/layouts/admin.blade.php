@@ -150,18 +150,19 @@
 
 
 {{--</nav>--}}
-<nav class="navbar  navbar-expand-lg navbar-light bg-white" >
-    <a class="navbar-brand" href="/" style="padding-right: 130px; margin-top:1.5rem" >
-        <img src="{{ asset('images/logo-s1.png') }}" alt="Logo" style="height: 80px; width: auto;margin-left:-10px;">
-        S A T
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand d-flex align-items-end" href="/" style="padding-right: 130px; margin-top: 1.5rem;">
+        <img src="{{ asset('images/logo-s1.png') }}" alt="Logo" style="height: 80px; width: auto; margin-left: -10px;">
+        <span style="margin-left: -10px; font-size: 24px; font-weight: 500; color: grey; padding-bottom: 18px;">Asset Tracking</span>
     </a>
     <button class="navbar-toggler mr-auto mr-lg-auto mr-md-auto mr-xl-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     @include('partials.nav_menu')
-
 </nav>
+
+
 <div>
 {{--    @include('partials.menu')--}}
     <main class="main">
