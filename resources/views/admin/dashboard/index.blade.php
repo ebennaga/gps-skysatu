@@ -171,7 +171,7 @@
         <i class="fa fa-angle-double-left"></i>
     </div>
     <section >
-        <div class="tabs tabs-style-linebox">
+        <div class="tabs tabs-style-linebox" style="margin-top:10px;">
             <nav>
                 <ul style="position: fixed; z-index: 1; background-color: #fff; width: 268px; height: 60px;">
                     <li id="tab-track" class="tab-current"><a href="#section-linebox-1"><span style="Arial, Helvetica, sans-serif;">Track</span></a></li>
