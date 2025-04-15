@@ -14,44 +14,83 @@ use Yajra\DataTables\Facades\DataTables;
 
 class PermissionsController extends Controller
 {
+    // public function index(Request $request)
+    // {
+    //     if ($request->ajax()) {
+    //         $query = Permission::query()->select(sprintf('%s.*', (new Permission)->table));
+    //         $table = Datatables::of($query);
+
+    //         $table->addColumn('placeholder', '&nbsp;');
+    //         $table->addColumn('actions', '&nbsp;');
+
+    //         $table->editColumn('actions', function ($row) {
+    //             $viewGate      = 'permission_show';
+    //             $editGate      = 'permission_edit';
+    //             $deleteGate    = 'permission_delete';
+    //             $crudRoutePart = 'permissions';
+
+    //             return view('partials.datatablesActions', compact(
+    //                 'viewGate',
+    //                 'editGate',
+    //                 'deleteGate',
+    //                 'crudRoutePart',
+    //                 'row'
+    //             ));
+    //         });
+
+    //         $table->editColumn('id', function ($row) {
+    //             return $row->id ? $row->id : "";
+    //         });
+    //         $table->editColumn('title', function ($row) {
+    //             return $row->title ? $row->title : "";
+    //         });
+
+    //         $table->rawColumns(['actions', 'placeholder']);
+
+    //         return $table->make(true);
+    //     }
+
+    //     return view('admin.permissions.index');
+    // }
     public function index(Request $request)
-    {
-        if ($request->ajax()) {
-            $query = Permission::query()->select(sprintf('%s.*', (new Permission)->table));
-            $table = Datatables::of($query);
+{
+    if ($request->ajax()) {
+        $query = Permission::query()->select(sprintf('%s.*', (new Permission)->getTable()));
+        $table = Datatables::of($query);
 
-            $table->addColumn('placeholder', '&nbsp;');
-            $table->addColumn('actions', '&nbsp;');
+        $table->addColumn('placeholder', '&nbsp;');
+        $table->addColumn('actions', '&nbsp;');
 
-            $table->editColumn('actions', function ($row) {
-                $viewGate      = 'permission_show';
-                $editGate      = 'permission_edit';
-                $deleteGate    = 'permission_delete';
-                $crudRoutePart = 'permissions';
+        $table->editColumn('actions', function ($row) {
+            $viewGate      = 'permission_show';
+            $editGate      = 'permission_edit';
+            $deleteGate    = 'permission_delete';
+            $crudRoutePart = 'permissions';
 
-                return view('partials.datatablesActions', compact(
-                    'viewGate',
-                    'editGate',
-                    'deleteGate',
-                    'crudRoutePart',
-                    'row'
-                ));
-            });
+            return view('partials.datatablesActions', compact(
+                'viewGate',
+                'editGate',
+                'deleteGate',
+                'crudRoutePart',
+                'row'
+            ));
+        });
 
-            $table->editColumn('id', function ($row) {
-                return $row->id ? $row->id : "";
-            });
-            $table->editColumn('title', function ($row) {
-                return $row->title ? $row->title : "";
-            });
+        $table->editColumn('id', function ($row) {
+            return $row->id ?? '';
+        });
 
-            $table->rawColumns(['actions', 'placeholder']);
+        $table->editColumn('title', function ($row) {
+            return $row->title ?? '';
+        });
 
-            return $table->make(true);
-        }
+        $table->rawColumns(['actions', 'placeholder']);
 
-        return view('admin.permissions.index');
+        return $table->make(true);
     }
+
+    return view('admin.permissions.index');
+}
 
     public function create()
     {
