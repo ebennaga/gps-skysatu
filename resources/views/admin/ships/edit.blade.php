@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-
+<div style="margin-top:35px;">
+</div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.edit') }} {{ trans('cruds.ship.title_singular') }}

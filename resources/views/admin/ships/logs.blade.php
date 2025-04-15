@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 @section('content')
+<div style="margin-top:35px;">
+</div>
 <style>
     #exampleAll_filter {
         display: none;
