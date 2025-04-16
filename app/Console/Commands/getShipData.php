@@ -42,13 +42,13 @@ public function handle ()
             $data = json_decode($data);
             if ($data->ErrorID === 0) {
                 foreach ($data->Mobiles as $mobile) {
-                    $countShip = Ship::where(['ship_ids' => $mobile->ID, 'last_registration_utc' => $mobile->LastRegistrationUTC])->count();
+                    $countShip = Ship::where(['ship_ids' => $mobile->ID, 'last_registration_utc' => $mobile->LastRegistrationUTC ?? null])->count();
                     if ($countShip === 0) {
                         if (Ship::where('ship_ids', $mobile->ID)->count() > 0) {
                             $ship = Ship::where('ship_ids', $mobile->ID)->first();
                             $ship->ship_ids              = $mobile->ID ?? '';
                             $ship->region_name           = $mobile->RegionName ?? '';
-                            $ship->last_registration_utc = $mobile->LastRegistrationUTC ;
+                            $ship->last_registration_utc = $mobile->LastRegistrationUTC  ;
                         
                             $ship->save();
                             echo 'Edit Ship Id ' . $mobile->ID ."\n";
@@ -57,7 +57,7 @@ public function handle ()
                             $ship = new Ship();
                             $ship->ship_ids              = $mobile->ID ?? '';
                             $ship->region_name           = $mobile->RegionName ?? '';
-                            $ship->last_registration_utc = $mobile->LastRegistrationUTC ;
+                            $ship->last_registration_utc = $mobile->LastRegistrationUTC ?? null;
                             if (isset($mobile->Description)) {
                                 $explodeDescription = explode('-', $mobile->Description);
                                 $ship->name         = trim($explodeDescription[0]);
