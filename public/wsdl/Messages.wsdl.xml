@@ -1272,10 +1272,10 @@
     </wsdl:binding>
     <wsdl:service name="GatewayInterface">
         <wsdl:port name="IGWS" binding="tns:IGWS">
-            <soap:address location="https://isatdatapro.skywave.com/GLGW/GWServices_v1/Messages.svc"/>
+            <soap:address location="https://isatdatapro.orbcomm.com/GLGW/2/Messages.svc"/>
         </wsdl:port>
         <wsdl:port name="IGWS1" binding="tns:IGWS1">
-            <soap:address location="http://isatdatapro.skywave.com/GLGW/GWServices_v1/Messages.svc"/>
+            <soap:address location="https://isatdatapro.orbcomm.com/GLGW/2/Messages.svc"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
