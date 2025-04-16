@@ -10,8 +10,8 @@ class BaseController extends Controller
 
     public function __construct ()
     {
-        // $this->url             = 'https://isatdatapro.skywave.com/GLGW/GWServices_v1/RestMessages.svc/';
-        $this->url             = 'https://isatdatapro.orbcomm.com/GLGW/2/RestMessages.svc/';
+        $this->url             = 'https://isatdatapro.skywave.com/GLGW/GWServices_v1/RestMessages.svc/';
+        // $this->url             = 'https://isatdatapro.orbcomm.com/GLGW/2/RestMessages.svc/JSON';
         $this->accessId        = 70003234; //70002601
         $this->passw           = "EPZEBTAY"; // KRYSRSZT
         $this->errorCodes      = [];
