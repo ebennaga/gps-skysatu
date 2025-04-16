@@ -11,8 +11,8 @@ class BaseController extends Controller
     public function __construct ()
     {
         $this->url             = 'https://isatdatapro.skywave.com/GLGW/GWServices_v1/RestMessages.svc/';
-        $this->accessId        = 70002601;
-        $this->passw           = "KRYSRSZT";
+        $this->accessId        = 70003234; //70002601
+        $this->passw           = "EPZEBTAY"; // KRYSRSZT
         $this->errorCodes      = [];
         $this->mobiles         = [];
         $this->returnMsgFromId = 0;
