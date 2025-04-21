@@ -11,8 +11,8 @@ class CronData
     {
         $this->url             = 'https://isatdatapro.skywave.com/GLGW/GWServices_v1/RestMessages.svc/';
         // $this->url             = 'https://isatdatapro.orbcomm.com/GLGW/2/RestMessages.svc/JSON';
-        $this->accessId        = 70003213; //70002601
-        $this->passw           = "JGKTGXFJ"; // KRYSRSZT
+        $this->accessId        = 70002601; //70002601
+        $this->passw           = "KRYSRSZT"; // KRYSRSZT
         $this->errorCodes      = [];
         $this->mobiles         = [];
         $this->returnMsgFromId = 0;
@@ -61,6 +61,7 @@ class CronData
                 ]
             );
             return $response->getBody()->getContents();
+            dd($response);
         } catch (\Exception $e) {
             return $e->getMessage();
         }
