@@ -62,23 +62,19 @@ class PermissionsController extends Controller
         $table->addColumn('actions', '&nbsp;');
 
         $table->editColumn('actions', function ($row) {
-            try {
-                $viewGate      = 'permission_show';
-                $editGate      = 'permission_edit';
-                $deleteGate    = 'permission_delete';
-                $crudRoutePart = 'permissions';
-        
-                return view('partials.datatablesActions', compact(
-                    'viewGate',
-                    'editGate',
-                    'deleteGate',
-                    'crudRoutePart',
-                    'row'
-                ))->render();
-            } catch (\Exception $e) {
-                return 'Error: ' . $e->getMessage();
-            }
-        });
+            $viewGate      = 'permission_show';
+            $editGate      = 'permission_edit';
+            $deleteGate    = 'permission_delete';
+            $crudRoutePart = 'permissions';
+
+            return view('partials.datatablesActions', compact(
+                'viewGate',
+                'editGate',
+                'deleteGate',
+                'crudRoutePart',
+                'row'
+            ));
+        })->render();
 
         $table->editColumn('id', function ($row) {
             return $row->id ?? '';
