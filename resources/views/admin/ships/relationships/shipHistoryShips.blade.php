@@ -40,20 +40,11 @@
                         <td>
                             <select class="form-control" id="myInput" name="datep">
                             <option value="xxxxxxxxxxxxxxx"></option>
-                            <option value="{{ $ship->ship_ids }} 2023-12">2023-12</option>
-                            <option value="{{ $ship->ship_ids }} 2021-12">2021-12</option>
-                            <option value="{{ $ship->ship_ids }} 2022-01">2022-01</option>    
-                            <option value="{{ $ship->ship_ids }} 2022-02">2022-02</option>
-                            <option value="{{ $ship->ship_ids }} 2022-03">2022-03</option>
-                            <option value="{{ $ship->ship_ids }} 2022-04">2022-04</option>
-                            <option value="{{ $ship->ship_ids }} 2022-05">2022-05</option>
-                            <option value="{{ $ship->ship_ids }} 2022-06">2022-06</option>
-                            <option value="{{ $ship->ship_ids }} 2022-07">2022-07</option>
-                            <option value="{{ $ship->ship_ids }} 2022-08">2022-08</option>
-                            <option value="{{ $ship->ship_ids }} 2022-09">2022-09</option>
-                            <option value="{{ $ship->ship_ids }} 2022-10">2022-10</option>
-                            <option value="{{ $ship->ship_ids }} 2022-11">2022-11</option>
-                            <option value="{{ $ship->ship_ids }} 2022-12">2022-12</option>
+                            <option value="{{ $ship->ship_ids }} 2023-12">2025-04</option>
+                            <option value="{{ $ship->ship_ids }} 2021-12">2025-03</option>
+                            <option value="{{ $ship->ship_ids }} 2022-01">2025-02</option>    
+                            <option value="{{ $ship->ship_ids }} 2022-02">2025-01</option>
+                            
                             </select>
                         </td>
                     </tr>
