@@ -75,22 +75,43 @@
   dtButtons.push(deleteButton)
 @endcan
 
-  let dtOverrideGlobals = {
-    buttons: dtButtons,
-    processing: true,
-    serverSide: true,
-    retrieve: true,
-    aaSorting: [],
-    ajax: "{{ route('admin.permissions.index') }}",
-    columns: [
-      { data: 'placeholder', name: 'placeholder' },
-{ data: 'id', name: 'id' },
-{ data: 'actions', name: 'actions' },
-{ data: 'title', name: 'title' }
-    ],
-    order: [[ 1, 'desc' ]],
-    pageLength: 100,
-  };
+//   let dtOverrideGlobals = {
+//     buttons: dtButtons,
+//     processing: true,
+//     serverSide: true,
+//     retrieve: true,
+//     aaSorting: [],
+//     ajax: "{{ route('admin.permissions.index') }}",
+//     columns: [
+//       { data: 'placeholder', name: 'placeholder' },
+// { data: 'id', name: 'id' },
+// { data: 'actions', name: '{{ trans('global.actions') }}' },
+// { data: 'title', name: 'title' }
+//     ],
+//     order: [[ 1, 'desc' ]],
+//     pageLength: 100,
+//   };
+let dtOverrideGlobals = {
+  buttons: dtButtons,
+  processing: true,
+  serverSide: true,
+  retrieve: true,
+  aaSorting: [],
+  ajax: {
+    url: "{{ route('admin.permissions.index') }}",
+    error: function(xhr, error, thrown) {
+      console.error('DataTables AJAX error:', xhr.responseText);
+    }
+  },
+  columns: [
+    { data: 'placeholder', name: 'placeholder' },
+    { data: 'id', name: 'id' },
+    { data: 'actions', name: 'actions' },
+    { data: 'title', name: 'title' }
+  ],
+  order: [[1, 'desc']],
+  pageLength: 100,
+};
   $('.datatable-Permission').DataTable(dtOverrideGlobals);
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
         $($.fn.dataTable.tables(true)).DataTable()
