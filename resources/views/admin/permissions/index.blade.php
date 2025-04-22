@@ -42,9 +42,7 @@
 @endsection
 @section('scripts')
 @parent
-<meta name="csrf-token" content="{{ csrf_token() }}">
 <script>
-  let _token = $('meta[name="csrf-token"]').attr('content');
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('permission_delete')
@@ -87,7 +85,7 @@
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' },
+{ data: 'actions', name: 'actions' },
 { data: 'title', name: 'title' }
     ],
     order: [[ 1, 'desc' ]],
