@@ -73,8 +73,8 @@ class PermissionsController extends Controller
                 'deleteGate',
                 'crudRoutePart',
                 'row'
-            ));
-        })->render();
+            ))->render();
+        });
 
         $table->editColumn('id', function ($row) {
             return $row->id ?? '';
