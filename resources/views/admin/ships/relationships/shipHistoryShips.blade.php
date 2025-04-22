@@ -40,10 +40,10 @@
                         <td>
                             <select class="form-control" id="myInput" name="datep">
                             <option value="xxxxxxxxxxxxxxx"></option>
-                            <option value="{{ $ship->ship_ids }} 2023-12">2025-04</option>
-                            <option value="{{ $ship->ship_ids }} 2021-12">2025-03</option>
-                            <option value="{{ $ship->ship_ids }} 2022-01">2025-02</option>    
-                            <option value="{{ $ship->ship_ids }} 2022-02">2025-01</option>
+                            <option value="{{ $ship->ship_ids }} 2025-04">2025-04</option>
+                            <option value="{{ $ship->ship_ids }} 2025-03">2025-03</option>
+                            <option value="{{ $ship->ship_ids }} 2025-02">2025-02</option>    
+                            <option value="{{ $ship->ship_ids }} 2025-01">2025-01</option>
                             
                             </select>
                         </td>
