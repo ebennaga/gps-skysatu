@@ -85,7 +85,7 @@
     columns: [
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' },
+{ data: 'actions', name: 'action' },
 { data: 'title', name: 'title' }
     ],
     order: [[ 1, 'desc' ]],
