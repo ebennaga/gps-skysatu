@@ -132,8 +132,8 @@
             </div>
             <div class="form-group">
                 <label for="last_registration_utc">Send To Pertamina</label>
-                <input class="{{ $errors->has('send_to_pertamina') ? 'is-invalid' : '' }}" type="radio" name="send_to_pertamina" value="1" @if($ship->send_to_pertamina == 1) checked @endif> Disable
-                <input class="{{ $errors->has('send_to_pertamina') ? 'is-invalid' : '' }}" type="radio" name="send_to_pertamina" value="0" @if($ship->send_to_pertamina == 0) checked @endif> Enable
+                <input class="{{ $errors->has('send_to_pertamina') ? 'is-invalid' : '' }}" type="radio" name="send_to_pertamina" value="1" @if($ship->send_to_pertamina == 1) checked @endif> Enable
+                <input class="{{ $errors->has('send_to_pertamina') ? 'is-invalid' : '' }}" type="radio" name="send_to_pertamina" value="0" @if($ship->send_to_pertamina == 0) checked @endif> Disable
                 @if($errors->has('call_sign'))
                     <div class="invalid-feedback">
                         {{ $errors->first('call_sign') }}
