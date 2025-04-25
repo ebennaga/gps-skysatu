@@ -29,8 +29,8 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', '203.126.30.55'),
-    /*'host' => env('MAIL_HOST', 'smtp.mailgun.org'),*/
+    // 'host' => env('MAIL_HOST', '203.126.30.55'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -57,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'ptptrack@skysatuconnect.com'),
-        'name' => env('MAIL_FROM_NAME', 'ptptrack@skysatuconnect.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'ptptrack@skysat.co.id'),
+        'name' => env('MAIL_FROM_NAME', 'ptptrack@skysat.co.id'),
     ],
 
     /*
@@ -72,7 +72,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'null'),
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
@@ -88,9 +88,9 @@ return [
    /* 'username' => env('MAIL_USERNAME'),
 
     'password' => env('MAIL_PASSWORD'), */
-    'username' => env('MAIL_USERNAME', 'ptptrack@skysatuconnect.com'),
+    'username' => env('MAIL_USERNAME', 'ptptrack@skysat.co.id'),
 
-    'password' => env('MAIL_PASSWORD', 'fuBr#26&'), 
+    'password' => env('MAIL_PASSWORD', 'Skysatu@@2021'), 
 
     /*
     |--------------------------------------------------------------------------
