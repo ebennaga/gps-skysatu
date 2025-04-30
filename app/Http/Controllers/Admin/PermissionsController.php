@@ -86,8 +86,9 @@ class PermissionsController extends Controller
 
         $table->rawColumns(['actions', 'placeholder']);
 
-        // return $table->make(true);
-        return response()->json($table->make(true)->getData());
+        return $table->make(true);
+       
+        
     }
 
     return view('admin.permissions.index');

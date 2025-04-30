@@ -34,6 +34,7 @@
                         <td>
                             <select class="form-control" id="myInput" name="datep">
                             <option value="xxxxxxxxxx"></option>
+                            <option value="2025-05-">2025-05</option>
                             <option value="2025-04-">2025-04</option>
                             <option value="2025-03-">2025-03</option>
                             <option value="2025-02-">2025-02</option>
