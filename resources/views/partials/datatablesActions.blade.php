@@ -1,17 +1,8 @@
-{{-- @can($viewGate)
+@can($viewGate)
     <a class="btn btn-xs btn-primary" href="{{ route('admin.' . $crudRoutePart . '.show', $row->id) }}">
         {{ trans('global.view') }}
     </a>
-@endcan --}}
-{{-- debug untuk viewGate --}}
-@if(Gate::allows($viewGate))
-    <a class="btn btn-xs btn-primary" href="{{ route('admin.' . $crudRoutePart . '.show', $row->id) }}">
-        {{ trans('global.view') }}
-    </a>
-@else
-    {{-- tampilkan error debug --}}
-    <span style="color:red;">No View Access</span>
-@endif
+@endcan
 @can($editGate)
     <a class="btn btn-xs btn-info" href="{{ route('admin.' . $crudRoutePart . '.edit', $row->id) }}">
         {{ trans('global.edit') }}
